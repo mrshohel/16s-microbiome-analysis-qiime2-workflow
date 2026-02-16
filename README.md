@@ -1,72 +1,69 @@
 # 16s-microbiome-analysis-qiime2-workflow
 Automated end-to-end QIIME2 pipeline for 16S rRNA amplicon analysis including DADA2 denoising, SILVA taxonomy classification, phylogenetic tree construction, alpha/beta diversity analysis, genus-level abundance profiling, and TSV/HTML exports.
 
-QIIME2 16S rRNA Amplicon Analysis Pipeline
+Here is a **minimal, academic, and professional README.md** version with clean icons and formal structure suitable for GitHub and research repositories.
 
-A reproducible end-to-end QIIME2 workflow for 16S rRNA gene amplicon sequencing data analysis, including denoising, taxonomic classification, phylogenetic reconstruction, and diversity analysis.
+---
 
-Overview
+# 🧬 QIIME2 16S rRNA Amplicon Analysis Pipeline
 
-This pipeline processes single-end 16S rRNA amplicon sequencing data using QIIME2. It performs quality control, ASV inference, taxonomy assignment with SILVA 138, phylogenetic tree construction, alpha and beta diversity analysis, and export of abundance tables for downstream statistical analysis.
+A reproducible, end-to-end QIIME2 workflow for 16S rRNA gene amplicon sequencing analysis, integrating denoising, taxonomic classification, phylogenetic reconstruction, and diversity profiling.
 
-Workflow Summary
+---
 
-Import sequencing data (manifest format)
+## 📖 Overview
 
-Quality assessment (demux summary)
+This pipeline processes single-end 16S rRNA sequencing data using QIIME2. It enables standardized microbiome analysis from raw FASTQ files to diversity metrics and abundance tables suitable for downstream statistical analysis and publication.
 
-DADA2 denoising and ASV generation
+The workflow follows current best practices for ASV-based microbiome analysis.
 
-Feature table summarization
+---
 
-Taxonomic classification (SILVA 138)
+## 🔬 Workflow
 
-Taxonomic composition visualization
+1. 📥 **Data Import** (Manifest format)
+2. 📊 **Quality Assessment** (Demultiplex summary)
+3. 🧪 **DADA2 Denoising** (ASV inference & chimera removal)
+4. 📋 **Feature Table Summarization**
+5. 🏷️ **Taxonomic Classification** (SILVA 138 classifier)
+6. 📈 **Taxonomic Composition Visualization**
+7. 🌳 **Phylogenetic Tree Construction** (MAFFT + FastTree)
+8. 📐 **Alpha Diversity** (Faith’s Phylogenetic Diversity)
+9. 📊 **Core Diversity Metrics** (Phylogenetic alpha & beta diversity)
+10. 🧮 **Genus-Level Abundance Profiling**
+11. 📂 **TSV Export for Statistical Analysis**
+12. 🌐 **Visualization Export (QZV → HTML)**
+13. 🌲 **Tree Export (Newick format)**
 
-Phylogenetic tree construction (MAFFT + FastTree)
+---
 
-Alpha diversity (Faith’s PD)
+## ⚙️ Requirements
 
-Core diversity metrics (phylogenetic alpha and beta diversity)
+* 🧬 QIIME2 (2023 or newer recommended)
+* 📚 SILVA 138 Naive Bayes classifier (.qza)
+* 🔢 biom-format
+* 🐧 Linux/Unix environment
 
-Genus-level abundance profiling
+---
 
-Export of feature tables (TSV format)
+## 📁 Inputs
 
-Export of visualizations (HTML)
+* `manifest.tsv` — QIIME2-compatible manifest file
+* `metadata.tsv` — Sample metadata file
+* Pre-trained SILVA classifier
 
-Export of rooted tree (Newick format)
+---
 
-Requirements
+## 📊 Outputs
 
-QIIME2 (2023+ recommended)
+* 🧬 ASV feature table
+* 🔎 Representative sequences
+* 🏷️ Taxonomy assignments
+* 📐 Alpha diversity metrics
+* 📊 Beta diversity metrics
+* 🧮 Genus-level raw and relative abundance tables
+* 🌐 Interactive HTML visualizations
+* 🌳 Rooted phylogenetic tree (.nwk)
 
-SILVA 138 Naive Bayes classifier (.qza)
+All outputs are organized in structured directories for reproducibility.
 
-biom-format
-
-Linux/Unix environment
-
-Inputs
-
-manifest.tsv (QIIME2-compatible manifest file)
-
-metadata.tsv (sample metadata file)
-
-Pre-trained SILVA classifier
-
-Outputs
-
-ASV feature table
-
-Representative sequences
-
-Taxonomy assignments
-
-Alpha and beta diversity metrics
-
-Genus-level abundance tables (raw and relative)
-
-HTML visualizations
-
-Rooted phylogenetic tree (Newick format)
